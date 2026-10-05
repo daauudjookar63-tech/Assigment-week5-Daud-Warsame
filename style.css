@@ -1,0 +1,166 @@
+/* Reset default spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #24252b;
+  color: #ffffff;
+}
+
+/* Main container */
+.hero {
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 90px 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+/* Announcement */
+.announcement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+
+  background-color: #30333d;
+  color: #d4d9e3;
+
+  padding: 10px 20px;
+  margin-bottom: 36px;
+  border-radius: 50px;
+
+  font-size: 16px;
+}
+
+/* Read More */
+.announcement a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.announcement a span {
+  margin-left: 6px;
+}
+
+.announcement a:hover {
+  text-decoration: underline;
+}
+
+/* Main heading */
+h1 {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  margin-bottom: 36px;
+}
+
+/* Description */
+.description {
+  max-width: 960px;
+  margin-bottom: 42px;
+
+  font-size: 24px;
+  line-height: 1.7;
+  color: #d0d5df;
+}
+
+/* Button: normal state */
+.start-button {
+  display: inline-block;
+
+  background-color: #4677eb;
+  color: #ffffff;
+
+  padding: 18px 36px;
+  border-radius: 10px;
+
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Button: cursor over it */
+.start-button:hover {
+  background-color: #15803d;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(34, 197, 94, 0.35);
+}
+
+/* Button: while clicking */
+.start-button:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+/* Keyboard focus */
+a:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 5px;
+}
+
+/* Smaller screens */
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 20px;
+  }
+
+  h1 {
+    font-size: 46px;
+  }
+
+  .description {
+    font-size: 19px;
+  }
+
+  .announcement {
+    font-size: 14px;
+  }
+
+  .start-button {
+    font-size: 18px;
+    padding: 16px 28px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 34px;
+  }
+
+  .description {
+    font-size: 17px;
+  }
+}
+
+/* Respect reduced-motion settings */
+@media (prefers-reduced-motion: reduce) {
+  .start-button {
+    transition: none;
+  }
+
+  .start-button:hover,
+  .start-button:active {
+    transform: none;
+  }
+}
